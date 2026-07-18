@@ -19,7 +19,7 @@
         <img src="image 4.jpg" alt="image 4">
         <img src="image 5.jpg" alt="image 5">
         
-      <p>Happy Birthday Soumita </p>
+      <p id="birthdayName">Happy Birthday</p>
     </div>
         <div id="ground"></div>
     </div>
@@ -136,5 +136,10 @@
             animate();
         };
     </script>
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  const nama = params.get("name") || "Friend";
+  document.getElementById("birthdayName").innerHTML = "Happy Birthday " + nama;
+</script>
 </body>
 </html>
